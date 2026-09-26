@@ -1,0 +1,3 @@
+- insert:
+    - id: cache-hit-monitor
+      name: dsh-cache-hit-monitor

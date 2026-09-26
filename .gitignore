@@ -1,0 +1,17 @@
+# Editors and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# Anything the test harnesses generate
+test/out/
+*.tmp

@@ -1,0 +1,76 @@
+{
+  "name": "dsh-cache-hit-monitor",
+  "version": "1.0.0",
+  "description": "Live prompt-cache telemetry for the current session in the DSH right sidebar: a register bank, a dot-matrix hit rate and a reactor-core history board.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "prompt-cache",
+    "cache-hit-rate",
+    "token-usage",
+    "sidebar",
+    "telemetry",
+    "instrument"
+  ],
+  "homepage": "https://github.com/Billwu18/dsh-cache-hit-monitor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Billwu18/dsh-cache-hit-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Billwu18/dsh-cache-hit-monitor/issues"
+  },
+  "author": "Billwu18",
+  "license": "MIT",
+  "type": "module",
+  "icon": "./icon.svg",
+  "engines": {
+    "dsh": ">=0.1.7-rc.1 <0.2.0-0",
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/run-all.mjs",
+    "preview": "node test/preview.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "screenshots.json",
+    "assets",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-client-locale": ">=0.1.7-rc.1 <0.2.0-0",
+    "@deepseek-ai/dsh-client-ui-sidebar-right": ">=0.1.7-rc.1 <0.2.0-0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.1.7-rc.1 <0.2.0-0",
+    "react": ">=18"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

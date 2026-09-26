@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Cache Hit Monitor",
+    "description": "A register bank, a dot-matrix hit rate and a reactor-core history board: live prompt-cache telemetry for the current session, in the DSH right sidebar."
+  }
+}
